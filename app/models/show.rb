@@ -7,6 +7,8 @@ class Show < ActiveRecord::Base
     self.where(rating: self.highest_rating)[0]
   end
 
-
+  def self.lowest_rating
+    self.minimum(:rating)
+  end
 
 end
