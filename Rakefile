@@ -18,12 +18,3 @@ namespace :db do
     File.delete(connection_details.fetch('database')) if File.exist?(connection_details.fetch('database'))
   end
 end
-
-desc
-task :environment do
-  require_relative './config/environment'
-end
-desc "starts console"
-task :console => :environment do
-  Pry.start
-end
