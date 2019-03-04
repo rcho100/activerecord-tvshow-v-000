@@ -20,7 +20,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    self.where(rating: self.highest_rating).order(2)
+    self.select(:rating).limit(2)
   end
 
 end
