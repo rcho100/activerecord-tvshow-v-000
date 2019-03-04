@@ -20,7 +20,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    self.most_popular_show.take(2)
+    self.most_popular_show.order(2)
   end
 
 end
